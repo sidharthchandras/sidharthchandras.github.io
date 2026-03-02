@@ -3,10 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Page</title>
+    <title>Sidharth weds Dr. Sai Ranjani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+Tamil:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome</h1>
-    <p>Contact: <!--email_off-->21f3003195@ds.study.iitm.ac.in<!--/email_off--></p>
+    <div class="container">
+        <!-- Background Music -->
+        <audio id="bgMusic" loop preload="auto">
+            <source src="music/nadaswaram.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="header">
+            <div class="tamil-title">திருமண விழா</div>
+            <h1 class="groom-name">Sidharth</h1>
+            <div class="weds">Weds</div>
+            <h1 class="bride-name">Dr. Sai Ranjani (a) Nithya</h1>
+            <div class="date-venue">
+                On Thursday, 23rd April 2026<br>
+                At INDeco Hotel, Swamimalai
+            </div>
+        </div>
+
+        <div class="section-title">Wedding Festivities</div>
+
+        <div class="events-day">
+            <div class="day-date">22nd April 2026</div>
+            <div class="event-item">
+                <span class="event-time">6.30 AM onwards</span>
+                <span>Vratham, Naandi, Nischayam<br>
+                <span class="venue">Venue: Shivamayam</span></span>
+            </div>
+            <div class="event-item">
+                <span class="event-time">5.30 PM onwards</span>
+                <span>Mappillai Azhippu<br>
+                <span class="venue">Venue: INDeco Main Gate</span></span>
+            </div>
+            <div class="event-item sangeeth">
+                <span class="event-time">6.30 PM onwards</span>
+                <span>Sangeeth<br>
+                <span class="venue">Venue: Oormayam</span></span>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="events-day muhurtham-day">
+            <div class="day-date">23rd April 2026</div>
+            <div class="event-item">
+                <span class="event-time">8.05 AM onwards</span>
+                <span>Kasi Yatrirai, Malai Matral, Oonjal<br>
+                <span class="venue">Venue: Palace Lawn</span></span>
+            </div>
+            <div class="muhurtham">
+                10.40 AM – 11.34 AM<br>
+                Muhurtham
+            </div>
+            <span class="venue">Venue: Aalamarathu Adi</span>
+        </div>
+
+        <!-- Venue Map Section -->
+        <div class="map-section">
+            <div class="section-title" style="margin-top: 20px;">Venue Location</div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.981865503186!2d79.33904057451943!3d10.964741155693025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baacd7a25359dd1%3A0x224c4f20bbe5d528!2sIndeco%20Hotels%20Swamimalai!5e0!3m2!1sen!2sin!4v1772423581610!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="accommodation">
+            <h3 style="color: #7B1E1E; margin-bottom: 15px; font-family: 'Cinzel', serif;">Guest Accommodation 🔑</h3>
+            <p>Our accommodation booking at INDeco is reserved for 24 hours from your time of arrival on 22nd April until 23rd April.</p>
+        </div>
+
+        <div class="rsvp-section">
+            <div class="rsvp-title">Kindly Grace the Occasion & Confirm Your Presence</div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf2O4YvlccyRNJOtuOrI1vSsOQzxyaIQeRvq2FKkLJ88kHjXg/viewform?usp=publish-editor" class="rsvp-btn" target="_blank">RSVP Here</a>
+            <p style="margin-top: 20px; font-style: italic;">Kindly respond at your earliest convenience.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; opacity: 0.6; font-size: 0.9rem;">
+            With blessings from our families | Swamimalai 2026
+        </div>
+    </div>
+
+    <script>
+        // Background Music Control
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
+
+        // Auto-play with user interaction fallback
+        document.addEventListener('click', function playMusic() {
+            if (!isPlaying) {
+                bgMusic.volume = 0.25; // Low volume
+                bgMusic.play().catch(e => console.log('Autoplay prevented'));
+                isPlaying = true;
+                document.removeEventListener('click', playMusic);
+            }
+        }, { once: true });
+
+        // Pause on visibility change
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                bgMusic.pause();
+            } else if (isPlaying) {
+                bgMusic.play();
+            }
+        });
+    </script>
 </body>
 </html>

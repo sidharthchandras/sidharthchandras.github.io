@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #F8F4E8;
+    background-image: 
+        linear-gradient(rgba(248,244,232,0.9), rgba(248,244,232,0.9)), 
+        radial-gradient(circle at 20% 80%, rgba(198,167,94,0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(123,30,30,0.03) 0%, transparent 50%);
+    color: #1F4D3A;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(ellipse 10% 10% at 10% 10%, rgba(198,167,94,0.1) 0%, transparent 50%),
+        radial-gradient(ellipse 15% 15% at 90% 90%, rgba(31,77,58,0.05) 0%, transparent 50%);
+    z-index: -2;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    position: relative;
+}
+
+.tamil-title {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 2.5rem;
+    color: #C6A75E;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.groom-name {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: #C6A75E;
+    letter-spacing: 0.1em;
+    margin: 0.2em 0;
+    text-shadow: 0 2px 4px rgba(123,30,30,0.2);
+}
+
+.bride-name {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: #C6A75E;
+    letter-spacing: 0.1em;
+    margin: 0.2em 0;
+    text-shadow: 0 2px 4px rgba(123,30,30,0.2);
+}
+
+.weds {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #7B1E1E;
+    font-weight: 500;
+    margin: 0.5em 0;
+    letter-spacing: 0.05em;
+}
+
+.date-venue {
+    font-size: 1.4rem;
+    color: #1F4D3A;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: #1F4D3A;
+    text-align: center;
+    margin: 50px 0 30px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #C6A75E, transparent);
+}
+
+.events-day {
+    background: rgba(248,244,232,0.7);
+    border: 1px solid rgba(198,167,94,0.3);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.muhurtham-day {
+    background: linear-gradient(135deg, rgba(198,167,94,0.1), rgba(248,244,232,0.9));
+    border-color: #C6A75E;
+}
+
+.day-date {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    color: #7B1E1E;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.event-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 15px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.event-item::before {
+    content: '🪔';
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.event-item.sangeeth::before {
+    content: '🎶';
+}
+
+.event-time {
+    font-weight: 500;
+    color: #7B1E1E;
+    min-width: 120px;
+}
+
+.muhurtham {
+    font-size: 1.3rem;
+    color: #C6A75E !important;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    background: rgba(198,167,94,0.1);
+    border-radius: 8px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.muhurtham::before,
+.muhurtham::after {
+    content: '✨';
+    position: absolute;
+    top: -5px;
+}
+
+.muhurtham::before { left: 10px; }
+.muhurtham::after { right: 10px; }
+
+.map-section {
+    margin: 40px 0;
+}
+
+.map-container {
+    background: rgba(248,244,232,0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    border: 1px solid rgba(198,167,94,0.3);
+}
+
+.accommodation {
+    background: rgba(248,244,232,0.8);
+    border: 2px solid rgba(198,167,94,0.4);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    margin: 40px 0;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.rsvp-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.rsvp-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: #1F4D3A;
+    margin-bottom: 20px;
+}
+
+.rsvp-btn {
+    background: #7B1E1E;
+    color: #C6A75E;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-family: 'Cinzel', serif;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(123,30,30,0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 0.05em;
+}
+
+.rsvp-btn:hover {
+    background: #C6A75E;
+    color: #7B1E1E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(198,167,94,0.4);
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #C6A75E, transparent);
+    margin: 40px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    background-image: url('images/lamp-icon.png');
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: hue-rotate(30deg) brightness(1.2);
+}
+
+.venue {
+    font-weight: 500;
+    color: #1F4D3A;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .header {
+        padding: 40px 10px;
+    }
+    .groom-name, .bride-name {
+        font-size: 2.5rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .event-item {
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .event-item::before {
+        position: static;
+        margin-right: 10px;
+    }
+    .map-container iframe {
+        height: 300px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container > * {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.container > *:nth-child(1) { animation-delay: 0.1s; }
+.container > *:nth-child(2) { animation-delay: 0.2s; }
