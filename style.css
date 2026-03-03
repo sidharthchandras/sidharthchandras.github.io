@@ -55,8 +55,8 @@ body::before {
 }
 
 .groom-name {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2rem, 8vw, 4rem);
     color: #C6A75E;
     letter-spacing: 0.1em;
     margin: 0.2em 0;
@@ -64,8 +64,8 @@ body::before {
 }
 
 .bride-name {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2rem, 8vw, 4rem);
     color: #C6A75E;
     letter-spacing: 0.1em;
     margin: 0.2em 0;
@@ -73,7 +73,7 @@ body::before {
 }
 
 .weds {
-    font-family: 'Cinzel', serif;
+    font-family: "Great Vibes", cursive;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     color: #7B1E1E;
     font-weight: 500;
@@ -82,14 +82,14 @@ body::before {
 }
 
 .date-venue {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     color: #1F4D3A;
     margin-top: 30px;
     font-style: italic;
 }
 
 .section-title {
-    font-family: 'Cinzel', serif;
+    font-family: "Great Vibes", cursive;
     font-size: 2.2rem;
     color: #1F4D3A;
     text-align: center;
@@ -268,7 +268,7 @@ body::before {
         padding: 40px 10px;
     }
     .groom-name, .bride-name {
-        font-size: 2.5rem;
+        font-size: 1rem;
     }
     .section-title {
         font-size: 1.8rem;
